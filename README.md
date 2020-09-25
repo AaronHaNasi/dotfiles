@@ -6,4 +6,4 @@ i3-gaps
 polybar
 picom 
 feh
-
+zsh

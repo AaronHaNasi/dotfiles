@@ -55,9 +55,9 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm i3
+modules-left = i3
 modules-center = spotify
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date updates-pacman-aurhelper powermenu
+modules-right = filesystem backlight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date updates-pacman-aurhelper powermenu
 
 tray-position = right
 tray-padding = 2
@@ -180,10 +180,10 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
+[module/backlight]
+type = internal/backlight
+card = amdgpu_bl0
+format = <label> <bar> <ramp>
 label = BL
 
 bar-width = 10
@@ -197,10 +197,15 @@ bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
 [module/backlight-acpi]
-inherit = module/xbacklight
+inherit = module/backlight
 type = internal/backlight
-card = intel_backlight
+card = amdgpu_b10
 
 [module/cpu]
 type = internal/cpu

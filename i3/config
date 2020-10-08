@@ -105,6 +105,9 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# brightness keys
+# bindsym XF86MonBrightnessUp exec brightnessctl set +5
+# bindsym XF86MonBrightnessDown exec brightnessctl set 5-
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -208,7 +211,8 @@ client.focused		#FF0000 #000000  #FF0000	#222222		#000000
 exec_always --no-startup-id $HOME/opts/polybar-launch.sh
 # exec nitrogen arch-wallpaper.jpg
 #exec /home/aaron/Documents/Code/Scripts/nitrogenscript.sh
-exec feh --bg-scale /home/aaron/Pictures/Wallpapers/Psi-Background.png
-
-
-
+exec feh --bg-scale /home/aaron/Pictures/Wallpapers/lion-wallpaper.png
+exec --no-startup-id dunst 
+exec --no-startup-id nextcloud 
+# exec --no-startup-id clight
+#
